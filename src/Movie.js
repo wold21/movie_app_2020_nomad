@@ -9,7 +9,7 @@ return (
         <div className="movie__data">
             <h3 className="movie__title">{title}</h3>
             <h5 className="movie__year">{year}</h5>
-            <ul className="genres">
+            <ul className="movie__genres">
                 {/*맵함수는 몇가지의 인자를 더 준다. 예를 들면 number, index*/}
                 {genres.map((genre, index) => (
                     <li key={index} className="genres__genre">
@@ -17,7 +17,7 @@ return (
                     </li>
                 ))}
             </ul>
-            <p className="movie__summary">{summary}</p>
+            <p className="movie__summary">{summary.slice(0, 180)}...</p>
         </div>
     </div>
   );
